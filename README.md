@@ -30,7 +30,7 @@ It is possible to develop the user interface without compiling the plugin. Insta
 Credits
 -------
 * [JavaScript InfoVis Toolkit](http://philogb.github.io/jit/)
-* [Jason Penny](github.com/jasonpenny/twebbrowser.utilities)
+* [TWebBrowser.utilities](https://github.com/jasonpenny/twebbrowser.utilities)
 * [Explorer Canvas](https://code.google.com/p/explorercanvas/) - Apache License 2.0
 * [SpinKit](http://tobiasahlin.com/spinkit/) - MIT License
 * [P.D. Johnson](http://delphidabbler.com/articles?article=18) - Lesser GPL
