@@ -1,0 +1,5 @@
+TreeMap_index_html      RCDATA "..\TreeMap\index.html"
+TreeMap_style_css       RCDATA "..\TreeMap\style.css"
+TreeMap_treemap_js      RCDATA "..\TreeMap\treemap.js"
+TreeMap_Lib_excanvas_js RCDATA "..\TreeMap\Lib\excanvas.js"
+TreeMap_Lib_jit_js      RCDATA "..\TreeMap\Lib\jit.js"

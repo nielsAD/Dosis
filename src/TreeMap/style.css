@@ -1,0 +1,287 @@
+/**
+ * Author: Niels A.D.
+ * Project: DoSiS (https://github.com/nielsAD/Dosis)
+ * License: GNU Lesser GPL (http://www.gnu.org/licenses/lgpl.html)
+ *
+ * TreeMap style
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F2F2F2;
+	font-size: 10px;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+
+* {
+	cursor: default;
+	outline: none;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	padding: 0;
+	margin: 0;
+}
+
+div#header, div#menu, a:link, a:visited, a:active {
+	background: #3C3933;
+	color: #EEEEEE;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:hover, a:active {
+	color: orange !important;
+	font-weight: bold;
+}
+
+div#header, div#menu {
+	position: absolute;
+	z-index: 100000;
+	left: -25%;
+
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div#header {
+	top: 0;
+	width: 125%;
+	height: 35px;
+}
+
+div#header.menu-open {
+	width: 100%;
+}
+
+div#header.menu-open, div#menu.menu-open {
+	left: 0px;
+}
+
+div#header * {
+	display: inline-block;
+}
+
+div#header ul {
+	list-style-type: none;
+
+	height: 25px;
+	line-height: 25px;
+	margin: 5px 0;
+}
+
+ul#menu-toggle {
+	width: 20%;
+	color: #3C3933;
+	font-size: 16px;
+}
+
+/*
+div#header.menu-open ul#menu-toggle {
+	width: 25%;
+}
+
+ul#menu-toggle:hover {
+	color: orange;
+	font-weight: bold;
+}
+
+ul#menu-toggle li {
+	cursor: pointer;
+	background: #F2F2F2;
+}
+
+ul#menu-toggle > :first-child {
+	width: 100%;
+	padding-left: 8px;
+}
+
+ul#menu-toggle > :last-child {
+	text-align: right;
+	border-radius: 0 30px 30px 0;
+    margin-left: -0.25px;
+	padding-right: 13px;
+}
+
+ul#menu-toggle:hover > :last-child {
+	padding-right: 18px;
+}
+*/
+
+ul#breadcrumbs {
+	margin-left: /*30px*/ 15px !important;
+	width: 60%;
+	width: calc(65% - 45px);
+}
+
+div#header.menu-open ul#breadcrumbs {
+	width: 55%;
+	width: calc(60% - 45px);
+}
+
+ul#breadcrumbs > li:not(:first-child):before {
+	content: "/"; 
+	display: inline-block;
+	width: 8px;
+	font-size: 12px;
+	text-align: center;
+	color: orange;
+}
+
+ul#breadcrumbs > li:not(:last-child) {
+	cursor: pointer;
+}
+
+ul#breadcrumbs > i:not(:last-child):hover {
+	color: orange;
+	font-weight: bold;
+}
+
+ul#breadcrumbs > li span {
+	color: orange;
+    font-size: 12px;
+}
+
+span#size {
+	text-align: right;
+	width: 15%;
+}
+
+div#menu {
+	top: 35px;
+	bottom: 0;
+	width: 25%;
+    overflow-y: auto;
+}
+
+div#menu ul {
+	margin: 10px;
+}
+
+div.node, div.node-root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+	color: white;
+	
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div#content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40px;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 0;
+
+	font-family: Verdana, Arial, Geneva, Calibri, sans-serif;
+	font-size: 9px;
+	text-align: center;
+	text-shadow: 1px 1px black;
+}
+
+div#content.menu-open {
+	left: 25%;
+}
+
+div.node {
+	border: 3px solid transparent;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.node:hover {
+	background-color: rgba(200, 200, 200, 0.15);
+	border-color: black;
+	font-size: 13px;
+}
+
+div.node-root {
+	text-decoration: underline;
+	cursor: auto;
+}
+
+div.node-static {
+	opacity: 0;
+	cursor: auto;
+}
+
+div.node-static:hover {
+	opacity: 1;
+}
+
+div#spinner {
+	/*http://tobiasahlin.com/spinkit/*/
+	position: absolute;
+	z-index: 100000;
+	display: none;
+	
+	width: 100px;
+	height: 100px;
+	
+	left: 45%;
+	left: calc(50% - 50px);
+	top: 45%;
+	top: calc(50% - 50px);
+	
+	border-radius: 3%;
+	background-color: #3C3933;
+	background: -webkit-radial-gradient(#383735, #3C3933);
+	background: -o-radial-gradient(#383735, #3C3933);
+	background: -moz-radial-gradient(#383735, #3C3933);
+	background: radial-gradient(#383735, #3C3933);
+
+	-webkit-animation: rotateplane 1.5s infinite ease-in-out;
+	-moz-animation: rotateplane 1.5s infinite ease-in-out;
+	animation: rotateplane 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+	0% { -webkit-transform: perspective(120px) }
+	50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+	100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@-moz-keyframes rotateplane {
+	0% { -webkit-transform: perspective(120px) }
+	50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+	100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes rotateplane {
+	0% { 
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+	} 50% { 
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+	} 100% { 
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+}
