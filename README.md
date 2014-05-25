@@ -6,6 +6,13 @@ Adds a `TreeMap` tab to the file properties dialog in Windows Explorer. This tab
 
 The tab is visible when at least one directory **or** multiple files are selected. Left click on a directory in the treemap zooms in. Zooming out is done with a right mouse click or a click on the ellipses in the upper left corner.
 
+Requirements
+------------
+* Windows XP or newer
+* Internet Explorer 8+
+
+For development of the plugin, [Delphi](http://www.embarcadero.com/products/delphi) is required.
+
 Installation
 ------------
 Download the [latest release](https://github.com/nielsAD/Dosis/releases/latest). There are two versions available. You need only one, depending on your architecture. If you are running a 64-bit version of Windows, download the `_x64` release, otherwise download the `x_86` release. The library can be placed in an arbitrary directory.
@@ -14,12 +21,11 @@ Open command prompt (`Win+R` hotkey, enter `cmd` and press OK) and navigate to t
 
 Removal of the library is done in a similar fashion: follow the steps above, but use `regsvr32 /u DoSiS_x86.dll` (`_x64` respectively) for the last step.
 
-Requirements
-------------
-* Windows XP or newer
-* Internet Explorer 8+
+Development
+-----------
+Pull requests are welcome! There are two parts to this plugin. The interface to the file system and integration with the file dialog is implemented in Delphi (see `/src/Sheet`). The user interface is written in HTML5, CSS, and Javascript (see `/src/TreeMap`). Development of either part is encouraged; I welcome pull requests!
 
-For development, [Delphi](http://www.embarcadero.com/products/delphi) is required.
+It is possible to develop the user interface without compiling the plugin. Install the library in the `/src` folder to load the user interface directly from the `/src/TreeMap` directory, instead of the plugin's resources.
 
 Credits
 -------
