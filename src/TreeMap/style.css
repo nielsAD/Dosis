@@ -11,12 +11,12 @@ body {
 	padding: 0;
 	background-color: #F2F2F2;
 	font-size: 10px;
-	
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;	
+	user-select: none;
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 	-moz-transition: all 0.2s;
 	-ms-transition: all 0.2s;
 	transition: all 0.2s;
-	
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -135,7 +135,7 @@ div#header.menu-open ul#breadcrumbs {
 }
 
 ul#breadcrumbs > li:not(:first-child):before {
-	content: "/"; 
+	content: "/";
 	display: inline-block;
 	width: 8px;
 	font-size: 12px;
@@ -180,7 +180,7 @@ div.node, div.node-root {
 
 	cursor: pointer;
 	color: white;
-	
+
 	white-space: nowrap;
 	overflow: hidden;
 }
@@ -206,7 +206,7 @@ div#content.menu-open {
 
 div.node {
 	border: 3px solid transparent;
-	
+
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -238,15 +238,15 @@ div#spinner {
 	position: absolute;
 	z-index: 100000;
 	display: none;
-	
+
 	width: 100px;
 	height: 100px;
-	
+
 	left: 45%;
 	left: calc(50% - 50px);
 	top: 45%;
 	top: calc(50% - 50px);
-	
+
 	border-radius: 3%;
 	background-color: #3C3933;
 	background: -webkit-radial-gradient(#383735, #3C3933);
@@ -272,13 +272,13 @@ div#spinner {
 }
 
 @keyframes rotateplane {
-	0% { 
+	0% {
 		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-	} 50% { 
+		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	} 50% {
 		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-	} 100% { 
+		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+	} 100% {
 		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 	}

@@ -31,7 +31,7 @@ type
     function LockRequest(dwOptions: DWORD): HResult; stdcall;
     function UnlockRequest: HResult; stdcall;
  end;
-  
+
   TProtocolCallback = function(
     aURL: string;
     var aMIMEType: string;
@@ -39,8 +39,8 @@ type
     const aPostData: TByteArray;
     aMemoryStream: TCustomMemoryStream
   ): Boolean of object;
-  
-const  
+
+const
   Class_StdURLProtocol: TGUID = '{79eac9e1-baf9-11ce-8c82-00aa004ba90b}';
   Class_HttpProtocol:   TGUID = '{79eac9e2-baf9-11ce-8c82-00aa004ba90b}';
   Class_FtpProtocol:    TGUID = '{79eac9e3-baf9-11ce-8c82-00aa004ba90b}';
@@ -119,12 +119,12 @@ var
 begin
   FillChar(LBindInfo, SizeOf(LBindInfo), 0);
   LBindInfo.cbSize := SizeOf(LBindInfo);
-  
+
   mimeType := '';
   postData := nil;
   pszMIMEType := nil;
-  Result := True;  
-  
+  Result := True;
+
   OIBindInfo.GetBindInfo(BINDF, LBindInfo);
   if ((LBindInfo.dwBindVerb <> BINDVERB_POST) or (LBindInfo.stgmedData.tymed <> TYMED_HGLOBAL)) then
     Exit;
@@ -195,7 +195,7 @@ begin
   FProtocolSink.ReportProgress(BINDSTATUS_CONNECTING,                '');
   FProtocolSink.ReportProgress(BINDSTATUS_SENDINGREQUEST,            '');
   FProtocolSink.ReportProgress(BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE, PChar(mimeType));
-  
+
   FData.Position := 0;
   FProtocolSink.ReportData(
     UrlMon.BSCF_FIRSTDATANOTIFICATION or UrlMon.BSCF_LASTDATANOTIFICATION or BSCF_DATAFULLYAVAILABLE,

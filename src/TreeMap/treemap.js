@@ -31,7 +31,7 @@ if (!Array.prototype.forEach)
 
 		var t = Object(this);
 		var len = t.length >>> 0;
-		
+
 		if (typeof fun !== "function")
 			throw new TypeError();
 
@@ -170,7 +170,7 @@ var toggleSpinner = function() {
 	var timer = null;
 	var toggleShow = function() { EL_SPINNER.style.display = 'block'; };
 	var toggleHide = function() { EL_SPINNER.style.display = 'none';  };
-	
+
 	return function(show) {
 		if (timer !== null)
 			clearTimeout(timer);
@@ -211,11 +211,11 @@ var interop = {
 				return generateJSONEntry(1, depth, this.maxChildren);
 			}
 		},
-	
+
 	setMaxChildren: function(maxChildren) {
 		this.external.maxChildren = maxChildren || -1;
 	},
-	
+
 	log: function(s) {
 		this.external.log(s);
 	},
@@ -333,7 +333,7 @@ tm.breadcrumbs = {
 		}
 	},
 
-	pushParent: function(node) {	
+	pushParent: function(node) {
 		var res = this.parents.push(node);
 		this.toggleParent();
 		return res;
@@ -349,7 +349,7 @@ tm.breadcrumbs = {
 		var len = this.parents.length;
 		return (len > 0) ? this.parents[len - 1] : null;
 	},
-    
+
 	getPath: function() {
 		return $jit.util.map(this.parents, function(n, i){ return i && n.name || ""; }).join('/');
 	},
@@ -370,7 +370,7 @@ tm.breadcrumbs = {
 		this.toggleStatic(domElement || node, true);
 		this.hoverNode();
 	},
-	
+
 	hoverNode: function(node) {
 		node = node || (this.parents.length && this.getParent());
 		EL_SIZE.innerHTML = scaleByteSize(node && node.data['$area']);
@@ -392,13 +392,13 @@ tm.breadcrumbs = {
 		if (!tm.busy && this.parents.length > 1) {
 			var node = this.popParent();
 			this.toggleStatic(node, false);
-			
+
 			var old_depth = this.depth;
 			var new_depth = this.depth = this.getParent()._depth;
 
 			for (var i = old_depth; node && i > new_depth + 1; i--)
 				node = node.getParents()[0];
-				
+
 			tm.clickedNode = node;
 			tm.out();
 		}
