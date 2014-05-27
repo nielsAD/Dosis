@@ -4,7 +4,7 @@
  * License: GNU Lesser GPL (http://www.gnu.org/licenses/lgpl.html)
  *
  * Interactive treemap for files and directories
-*/
+ */
 'use strict';
 
 var DEPTH = 2;
