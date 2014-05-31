@@ -93,6 +93,7 @@ ul#menu-toggle {
 	font-size: 16px;
 }
 
+/*
 div#header.menu-open ul#menu-toggle {
 	width: 25%;
 }
@@ -122,9 +123,10 @@ ul#menu-toggle > :last-child {
 ul#menu-toggle:hover > :last-child {
 	padding-right: 18px;
 }
+*/
 
 ul#breadcrumbs {
-	margin-left: 30px !important;
+	margin-left: 15px /*30px*/ !important;
 	width: 60%;
 	width: calc(65% - 45px);
 }
