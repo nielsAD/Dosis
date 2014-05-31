@@ -25,7 +25,7 @@ type
     procedure Set_maxChildren(Value: Integer); safecall;
   public
     constructor Create(ASheet: TDoSiSheetFileSize);
- 
+
     procedure log(const Str: WideString); safecall;
     function getDirectoryTree(const Index: WideString; Depth: Integer): WideString; safecall;
   end;
@@ -64,7 +64,7 @@ end;
 
 function TDoSiSheetInterop.get_DoSiS: WideString;
 var
-  Version: Cardinal;  
+  Version: Cardinal;
 begin
   Version := GetFileVersion(GetModuleName(HInstance));
   Result := Format('%d.%d', [HiWord(Version), LoWord(Version)]);
@@ -114,7 +114,7 @@ begin
     JSON := Dir.ToJSON(StrToIntDef(Args[2], 0))
   else
     JSON := Dir.ToJSON();
-  
+
   if (Length(Args) > 3) and (Args[3] <> '') then
   begin
     MIMEType := 'application/javascript';

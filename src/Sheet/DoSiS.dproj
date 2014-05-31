@@ -34,10 +34,11 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
+			<VerInfo_Release>1</VerInfo_Release>
 			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
 			<VerInfo_DLL>true</VerInfo_DLL>
 			<VerInfo_Locale>1033</VerInfo_Locale>
-			<VerInfo_Keys>CompanyName=;FileDescription=Dosis directory treemap propertysheet;FileVersion=1.0.0.0;InternalName=;LegalCopyright=© nielsAD;LegalTrademarks=;OriginalFilename=;ProductName=DoSiS;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<VerInfo_Keys>CompanyName=;FileDescription=Dosis directory treemap propertysheet;FileVersion=1.0.1.0;InternalName=;LegalCopyright=© nielsAD;LegalTrademarks=;OriginalFilename=;ProductName=DoSiS;ProductVersion=1.0.1.0;Comments=</VerInfo_Keys>
 			<Manifest_File>None</Manifest_File>
 			<GenDll>true</GenDll>
 			<DCC_UsePackage>bindcompfmx;fmx;rtl;dbrtl;IndySystem;DbxClientDriver;bindcomp;inetdb;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;xmlrtl;DbxCommonDriver;IndyProtocols;DBXMySQLDriver;dbxcds;bindengine;soaprtl;DBXOracleDriver;dsnap;DBXInformixDriver;IndyCore;fmxase;DBXFirebirdDriver;inet;fmxobj;inetdbxpress;DBXSybaseASADriver;fmxdae;dbexpress;DataSnapIndy10ServerTransport;IPIndyImpl;$(DCC_UsePackage)</DCC_UsePackage>

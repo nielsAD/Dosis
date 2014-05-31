@@ -10,6 +10,7 @@ Requirements
 ------------
 * Windows XP or newer
 * Internet Explorer 8+
+* Administrator rights (for installation only)
 
 For development of the plugin, [Delphi](http://www.embarcadero.com/products/delphi) is required.
 
