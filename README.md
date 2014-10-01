@@ -18,7 +18,7 @@ Installation
 ------------
 Download the [latest release](https://github.com/nielsAD/Dosis/releases/latest). There are two versions available. You need only one, depending on your architecture. If you are running a 64-bit version of Windows, download the `_x64` release, otherwise download the `x_86` release. The library can be placed in an arbitrary directory.
 
-Open command prompt (`Win+R` hotkey, enter `cmd` and press OK) and navigate to the library folder (`cd ENTER YOUR FOLDER HERE`). Then, register the library with `regsvr32 DoSiS_x86.dll` (`_x64` if you're running 64-bit Windows).
+Open command prompt [as administrator](http://www.askvg.com/guide-different-ways-to-open-command-prompt-as-administrator-in-windows/) and navigate to the library folder (`cd ENTER YOUR FOLDER HERE`). Then, register the library with `regsvr32 DoSiS_x86.dll` (`_x64` if you're running 64-bit Windows). If you get an error with code 0X80004005, you are most likely not running command prompt as administrator.
 
 Removal of the library is done in a similar fashion: follow the steps above, but use `regsvr32 /u DoSiS_x86.dll` (`_x64` respectively) for the last step.
 
